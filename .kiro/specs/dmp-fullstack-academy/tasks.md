@@ -57,19 +57,19 @@ This plan implements the DMP Full Stack Academy gamified LMS platform across 42 
 - [x] 17. Quiz System: Create Quiz, QuizQuestion, QuizAnswerOption, QuizAttempt, QuizBestScore entities and repositories. Create QuizService with createQuiz (validate structure, ownership), getQuiz (enrollment check, hide answers), submitQuiz (calculate score, store attempt, update best score, first pass → award XP + streak). Create QuizController. Write unit and integration tests.
   - Requirements: R9
 
-- [ ] 18. Coding Challenge System: Create CodingChallenge, ChallengeTestCase, ChallengeSubmission, ChallengeCompletion entities and repositories. Create CodeExecutionService (Docker sandbox, timeout). Create ChallengeService with createChallenge, getChallenge (enrollment), submitCode (execute, store, first completion → award XP + streak). Create ChallengeController. Write unit and integration tests.
+- [x] 18. Coding Challenge System: Create CodingChallenge, ChallengeTestCase, ChallengeSubmission, ChallengeCompletion entities and repositories. Create CodeExecutionService (Docker sandbox, timeout). Create ChallengeService with createChallenge, getChallenge (enrollment), submitCode (execute, store, first completion → award XP + streak). Create ChallengeController. Write unit and integration tests.
   - Requirements: R10
 
-- [ ] 19. Badge System: Create Badge and UserBadge entities/repositories. Create BadgeService.evaluateAndAwardBadge(). Create BadgeEventListener listening for streak/course/XP events. Add GET /api/v1/gamification/badges endpoint. Write unit and integration tests.
+- [x] 19. Badge System: Create Badge and UserBadge entities/repositories. Create BadgeService.evaluateAndAwardBadge(). Create BadgeEventListener listening for streak/course/XP events. Add GET /api/v1/gamification/badges endpoint. Write unit and integration tests.
   - Requirements: R13
 
 - [ ] 20. Quest System: Create Quest, QuestObjective, StudentQuestProgress, StudentObjectiveProgress entities/repositories. Create QuestService with create (ADMIN, validate), listActive, getWithProgress, checkCompletion (award XP). Create QuestEventListener updating objective progress on activity events. Create QuestController. Write unit and integration tests.
   - Requirements: R14
 
-- [ ] 21. Certificate Generation: Create Certificate entity with UNIQUE(student_id, course_id). Create CertificateService with generate (on course completion, duplicate prevention), list (paginated), verify (public, 404 if not found). Create CertificateEventListener on CourseCompletedEvent. Create CertificateController. Write unit and integration tests.
+- [x] 21. Certificate Generation: Create Certificate entity with UNIQUE(student_id, course_id). Create CertificateService with generate (on course completion, duplicate prevention), list (paginated), verify (public, 404 if not found). Create CertificateEventListener on CourseCompletedEvent. Create CertificateController. Write unit and integration tests.
   - Requirements: R16
 
-- [ ] 22. Notification System: Create Notification entity/repository. Create NotificationService with create, list (paginated, desc by date), markAsRead (ownership check), getUnreadCount, createAnnouncement (ADMIN, for all active users). Create NotificationEventListener on badge/certificate events. Create NotificationController. Write unit and integration tests.
+- [x] 22. Notification System: Create Notification entity/repository. Create NotificationService with create, list (paginated, desc by date), markAsRead (ownership check), getUnreadCount, createAnnouncement (ADMIN, for all active users). Create NotificationEventListener on badge/certificate events. Create NotificationController. Write unit and integration tests.
   - Requirements: R17
 
 - [ ] 23. Course Reviews: Create CourseReview entity with UNIQUE(student_id, course_id). Create ReviewService with submit (enrollment check, duplicate prevention, PENDING status), listApproved (paginated), moderate (ADMIN: approve/reject/remove, recalculate avg rating). Create ReviewController. Write unit and integration tests.
