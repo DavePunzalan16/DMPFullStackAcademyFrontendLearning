@@ -102,34 +102,34 @@ This plan implements the DMP Full Stack Academy gamified LMS platform across 42 
 - [x] 32. Frontend — Student Dashboard: Create gamification feature module. Create xp-card, streak-card, badge-grid, quest-card components. Create student dashboard page aggregating all data. Mobile-first responsive layout with empty state handling.
   - Requirements: R20, R25
 
-- [ ] 33. Frontend — Course Learning Experience: Create lesson feature module (types, api, hooks). Create lesson-sidebar (module/lesson tree with checkmarks), lesson-viewer (text + YouTube + complete button). Create enrolled course page, lesson page, progress page. Implement enrollment hook. Handle premium lesson gating.
+- [x] 33. Frontend — Course Learning Experience: Create lesson feature module (types, api, hooks). Create lesson-sidebar (module/lesson tree with checkmarks), lesson-viewer (text + YouTube + complete button). Create enrolled course page, lesson page, progress page. Implement enrollment hook. Handle premium lesson gating.
   - Requirements: R6, R8, R15, R25
 
-- [ ] 34. Frontend — Quiz Player: Create quiz feature module (types, api, hooks). Create quiz-player component (question navigation, radio answers, submit). Create quiz-results component (score, per-question feedback). Integrate from lesson page. Handle re-submission, accessible radio groups.
+- [x] 34. Frontend — Quiz Player: Create quiz feature module (types, api, hooks). Create quiz-player component (question navigation, radio answers, submit). Create quiz-results component (score, per-question feedback). Integrate from lesson page. Handle re-submission, accessible radio groups.
   - Requirements: R9, R25
 
-- [ ] 35. Frontend — Coding Challenge Workspace: Create challenge feature module (types, api, hooks). Create code-editor component (Monaco wrapper). Create challenge-workspace (split pane: problem + editor). Create test-results component. Integrate from lesson page. Handle timeout errors, responsive layout.
+- [x] 35. Frontend — Coding Challenge Workspace: Create challenge feature module (types, api, hooks). Create code-editor component (Monaco wrapper). Create challenge-workspace (split pane: problem + editor). Create test-results component. Integrate from lesson page. Handle timeout errors, responsive layout.
   - Requirements: R10, R25
 
-- [ ] 36. Frontend — Instructor Dashboard & Course Management: Create instructor analytics module. Create instructor dashboard, course list, create/edit course forms, module/lesson management page (drag-and-drop reorder), course analytics page, student activity table. Implement publish flow with validation feedback.
+- [x] 36. Frontend — Instructor Dashboard & Course Management: Create instructor analytics module. Create instructor dashboard, course list, create/edit course forms, module/lesson management page (drag-and-drop reorder), course analytics page, student activity table. Implement publish flow with validation feedback.
   - Requirements: R4, R7, R8, R18, R25
 
-- [ ] 37. Frontend — Instructor Quiz & Challenge Creation: Create quiz-form component (dynamic questions/options, validation). Create challenge-form component (Monaco editor for starter code, test cases). Integrate from lesson management. Zod validation matching backend constraints.
+- [x] 37. Frontend — Instructor Quiz & Challenge Creation: Create quiz-form component (dynamic questions/options, validation). Create challenge-form component (Monaco editor for starter code, test cases). Integrate from lesson management. Zod validation matching backend constraints.
   - Requirements: R9, R10, R25
 
-- [ ] 38. Frontend — Admin Dashboard: Create admin dashboard page (platform analytics cards). Create user management page (role change with confirmation). Create courses, categories, learning-paths, quests, reviews moderation, announcements pages. Handle last-admin protection error.
+- [x] 38. Frontend — Admin Dashboard: Create admin dashboard page (platform analytics cards). Create user management page (role change with confirmation). Create courses, categories, learning-paths, quests, reviews moderation, announcements pages. Handle last-admin protection error.
   - Requirements: R5, R14, R17, R19, R22, R25
 
-- [ ] 39. Frontend — Notifications, Badges, Certificates & Reviews: Create notification feature module with bell component and list page. Create badges page, certificates page, quest progress page. Create public certificate verification page. Add review submission to course page. Display reviews on course detail.
+- [x] 39. Frontend — Notifications, Badges, Certificates & Reviews: Create notification feature module with bell component and list page. Create badges page, certificates page, quest progress page. Create public certificate verification page. Add review submission to course page. Display reviews on course detail.
   - Requirements: R13, R16, R17, R22, R25
 
 - [x] 40. Frontend — Landing Page & Public Pages: Create landing page with hero, features, CTA. Create 404 and error pages. Responsive design. WCAG 2.1 AA compliance audit on all public pages (contrast, headings, alt text, focus).
   - Requirements: R25
 
-- [ ] 41. OpenAPI Documentation & API Annotations: Add @Tag, @Operation, @ApiResponse, @Schema annotations to all controllers and DTOs. Verify Swagger UI at /swagger-ui.html and /v3/api-docs in dev profile.
+- [x] 41. OpenAPI Documentation & API Annotations: Add @Tag, @Operation, @ApiResponse, @Schema annotations to all controllers and DTOs. Verify Swagger UI at /swagger-ui.html and /v3/api-docs in dev profile.
   - Requirements: R23, R28
 
-- [ ] 42. Integration Testing & Docker Compose Validation: Configure Testcontainers base test class. Verify all tests pass (mvn verify). Test Docker Compose full stack startup with health checks. Verify frontend lint and build. Create README.md with setup instructions.
+- [x] 42. Integration Testing & Docker Compose Validation: Configure Testcontainers base test class. Verify all tests pass (mvn verify). Test Docker Compose full stack startup with health checks. Verify frontend lint and build. Create README.md with setup instructions.
   - Requirements: R28
 
 ## Task Dependency Graph
