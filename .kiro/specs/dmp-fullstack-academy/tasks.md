@@ -24,16 +24,16 @@ This plan implements the DMP Full Stack Academy gamified LMS platform across 42 
 - [x] 6. User Authentication (Login, Refresh, Logout): Create RefreshToken entity and repository. Create LoginAttemptService (5 failures in 15min → lock 30min). Implement AuthService.login() (credentials check, lockout check, issue tokens in HTTP-only secure cookies with SameSite=Strict). Implement refresh with token rotation and replay detection. Implement logout (revoke token, clear cookies). Write unit and integration tests for all auth flows.
   - Requirements: R2, R26
 
-- [ ] 7. Role-Based Authorization & User Management: Create UserService with getCurrentUser, listUsers (ADMIN paginated), updateUserRole (prevent self-change, prevent last-admin removal, revoke refresh tokens). Create UserController with GET /me, GET /users, PUT /users/{id}/role. Add @PreAuthorize annotations. Write unit and integration tests.
+- [x] 7. Role-Based Authorization & User Management: Create UserService with getCurrentUser, listUsers (ADMIN paginated), updateUserRole (prevent self-change, prevent last-admin removal, revoke refresh tokens). Create UserController with GET /me, GET /users, PUT /users/{id}/role. Add @PreAuthorize annotations. Write unit and integration tests.
   - Requirements: R3, R19
 
-- [ ] 8. Domain Event Infrastructure: Create abstract DomainEvent base class. Create concrete event classes (XpAwardedEvent, CourseCompletedEvent, LessonCompletedEvent, QuizPassedEvent, ChallengeCompletedEvent, BadgeAwardedEvent, CertificateIssuedEvent, StreakMilestoneEvent, CourseEnrolledEvent). Configure AsyncConfig with ThreadPoolTaskExecutor. Create placeholder @TransactionalEventListener @Async listener classes.
+- [x] 8. Domain Event Infrastructure: Create abstract DomainEvent base class. Create concrete event classes (XpAwardedEvent, CourseCompletedEvent, LessonCompletedEvent, QuizPassedEvent, ChallengeCompletedEvent, BadgeAwardedEvent, CertificateIssuedEvent, StreakMilestoneEvent, CourseEnrolledEvent). Configure AsyncConfig with ThreadPoolTaskExecutor. Create placeholder @TransactionalEventListener @Async listener classes.
   - Requirements: R27
 
-- [ ] 9. Category Management: Create Category entity, CategoryRepository (existsByNameIgnoreCase). Create CategoryService with create (case-insensitive uniqueness) and list. Create CategoryController POST /api/v1/categories (ADMIN) and GET (public). Write unit and integration tests.
+- [x] 9. Category Management: Create Category entity, CategoryRepository (existsByNameIgnoreCase). Create CategoryService with create (case-insensitive uniqueness) and list. Create CategoryController POST /api/v1/categories (ADMIN) and GET (public). Write unit and integration tests.
   - Requirements: R5
 
-- [ ] 10. Course Management (CRUD): Create Course entity with CourseStatus/Difficulty enums, soft-delete flag, FK to Category and User. Create CourseRepository with custom queries. Create CourseService with create (DRAFT), update (ownership check), publish (validate modules/lessons exist), softDelete (ADMIN), list published, list by instructor. Create CourseController with all endpoints. Write unit and integration tests.
+- [x] 10. Course Management (CRUD): Create Course entity with CourseStatus/Difficulty enums, soft-delete flag, FK to Category and User. Create CourseRepository with custom queries. Create CourseService with create (DRAFT), update (ownership check), publish (validate modules/lessons exist), softDelete (ADMIN), list published, list by instructor. Create CourseController with all endpoints. Write unit and integration tests.
   - Requirements: R4
 
 - [ ] 11. Module Management: Create Module entity with UNIQUE(course_id, order_index). Create ModuleRepository. Create ModuleService with add (auto order_index, ownership), update, delete (cascade + reorder), reorder (validate IDs). Create ModuleController. Write unit and integration tests.
