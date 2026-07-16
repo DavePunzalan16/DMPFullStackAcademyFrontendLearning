@@ -20,4 +20,7 @@ public interface LessonProgressRepository extends JpaRepository<LessonProgress, 
 
     @Query("SELECT lp FROM LessonProgress lp WHERE lp.student.id = :studentId AND lp.lesson.module.course.id = :courseId ORDER BY lp.completedAt DESC")
     List<LessonProgress> findByStudentAndCourse(UUID studentId, UUID courseId);
+
+    @Query("SELECT lp FROM LessonProgress lp JOIN FETCH lp.lesson l JOIN FETCH l.module m JOIN FETCH m.course WHERE lp.student.id = :studentId ORDER BY lp.completedAt DESC")
+    List<LessonProgress> findRecentByStudent(UUID studentId);
 }

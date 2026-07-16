@@ -63,7 +63,7 @@ This plan implements the DMP Full Stack Academy gamified LMS platform across 42 
 - [x] 19. Badge System: Create Badge and UserBadge entities/repositories. Create BadgeService.evaluateAndAwardBadge(). Create BadgeEventListener listening for streak/course/XP events. Add GET /api/v1/gamification/badges endpoint. Write unit and integration tests.
   - Requirements: R13
 
-- [ ] 20. Quest System: Create Quest, QuestObjective, StudentQuestProgress, StudentObjectiveProgress entities/repositories. Create QuestService with create (ADMIN, validate), listActive, getWithProgress, checkCompletion (award XP). Create QuestEventListener updating objective progress on activity events. Create QuestController. Write unit and integration tests.
+- [x] 20. Quest System: Create Quest, QuestObjective, StudentQuestProgress, StudentObjectiveProgress entities/repositories. Create QuestService with create (ADMIN, validate), listActive, getWithProgress, checkCompletion (award XP). Create QuestEventListener updating objective progress on activity events. Create QuestController. Write unit and integration tests.
   - Requirements: R14
 
 - [x] 21. Certificate Generation: Create Certificate entity with UNIQUE(student_id, course_id). Create CertificateService with generate (on course completion, duplicate prevention), list (paginated), verify (public, 404 if not found). Create CertificateEventListener on CourseCompletedEvent. Create CertificateController. Write unit and integration tests.
@@ -72,22 +72,22 @@ This plan implements the DMP Full Stack Academy gamified LMS platform across 42 
 - [x] 22. Notification System: Create Notification entity/repository. Create NotificationService with create, list (paginated, desc by date), markAsRead (ownership check), getUnreadCount, createAnnouncement (ADMIN, for all active users). Create NotificationEventListener on badge/certificate events. Create NotificationController. Write unit and integration tests.
   - Requirements: R17
 
-- [ ] 23. Course Reviews: Create CourseReview entity with UNIQUE(student_id, course_id). Create ReviewService with submit (enrollment check, duplicate prevention, PENDING status), listApproved (paginated), moderate (ADMIN: approve/reject/remove, recalculate avg rating). Create ReviewController. Write unit and integration tests.
+- [x] 23. Course Reviews: Create CourseReview entity with UNIQUE(student_id, course_id). Create ReviewService with submit (enrollment check, duplicate prevention, PENDING status), listApproved (paginated), moderate (ADMIN: approve/reject/remove, recalculate avg rating). Create ReviewController. Write unit and integration tests.
   - Requirements: R22
 
-- [ ] 24. Learning Paths: Create LearningPath and LearningPathCourse entities/repositories. Create LearningPathService with create (ADMIN, validate courses published), list (paginated, only with published courses), getById, updateOrder. Create LearningPathController. Write unit and integration tests.
+- [x] 24. Learning Paths: Create LearningPath and LearningPathCourse entities/repositories. Create LearningPathService with create (ADMIN, validate courses published), list (paginated, only with published courses), getById, updateOrder. Create LearningPathController. Write unit and integration tests.
   - Requirements: R5
 
-- [ ] 25. Course Search & Filtering: Add search repository method with JPQL (case-insensitive LIKE on title/description, filter by category/difficulty, only PUBLISHED non-deleted). Implement CourseService.searchCourses() with logical AND filtering. Add GET /api/v1/courses/search endpoint. Write unit and integration tests.
+- [x] 25. Course Search & Filtering: Add search repository method with JPQL (case-insensitive LIKE on title/description, filter by category/difficulty, only PUBLISHED non-deleted). Implement CourseService.searchCourses() with logical AND filtering. Add GET /api/v1/courses/search endpoint. Write unit and integration tests.
   - Requirements: R21
 
-- [ ] 26. Analytics System: Create CourseAnalytics and PlatformAnalytics entities/repositories. Create AnalyticsEventListener updating aggregates on enrollment/completion/quiz/certificate events. Create AnalyticsService with getCourseAnalytics (ownership check), getLessonAnalytics, getStudentActivity (paginated), getPlatformAnalytics (ADMIN). Create AnalyticsController. Write unit and integration tests.
+- [x] 26. Analytics System: Create CourseAnalytics and PlatformAnalytics entities/repositories. Create AnalyticsEventListener updating aggregates on enrollment/completion/quiz/certificate events. Create AnalyticsService with getCourseAnalytics (ownership check), getLessonAnalytics, getStudentActivity (paginated), getPlatformAnalytics (ADMIN). Create AnalyticsController. Write unit and integration tests.
   - Requirements: R18, R19
 
-- [ ] 27. Student Dashboard API: Create DashboardResponse record aggregating XP, level, streak, enrolled courses with progress, recent 10 activities, active quests. Create DashboardService using optimized queries (@EntityGraph, limited results). Add GET /api/v1/dashboard/student. Write unit and integration tests ensuring single-call response under 2 seconds.
+- [x] 27. Student Dashboard API: Create DashboardResponse record aggregating XP, level, streak, enrolled courses with progress, recent 10 activities, active quests. Create DashboardService using optimized queries (@EntityGraph, limited results). Add GET /api/v1/dashboard/student. Write unit and integration tests ensuring single-call response under 2 seconds.
   - Requirements: R20
 
-- [ ] 28. Admin Dashboard API: Add admin endpoints: GET /api/v1/dashboard/admin/analytics (platform totals + DAU), GET /api/v1/dashboard/admin/courses (all courses including drafts with enrollment counts). Implement in AnalyticsService with @PreAuthorize ADMIN. Write integration tests.
+- [x] 28. Admin Dashboard API: Add admin endpoints: GET /api/v1/dashboard/admin/analytics (platform totals + DAU), GET /api/v1/dashboard/admin/courses (all courses including drafts with enrollment counts). Implement in AnalyticsService with @PreAuthorize ADMIN. Write integration tests.
   - Requirements: R19
 
 - [ ] 29. Frontend — Auth Features: Create auth feature module (types, api, hooks). Create login-form and register-form components with React Hook Form + Zod. Create login and register pages. Create auth guard layouts for student/instructor/admin. Implement token refresh in api-client. Create use-current-user hook populating Zustand store.
