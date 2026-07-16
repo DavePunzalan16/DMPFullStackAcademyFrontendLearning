@@ -36,16 +36,16 @@ This plan implements the DMP Full Stack Academy gamified LMS platform across 42 
 - [x] 10. Course Management (CRUD): Create Course entity with CourseStatus/Difficulty enums, soft-delete flag, FK to Category and User. Create CourseRepository with custom queries. Create CourseService with create (DRAFT), update (ownership check), publish (validate modules/lessons exist), softDelete (ADMIN), list published, list by instructor. Create CourseController with all endpoints. Write unit and integration tests.
   - Requirements: R4
 
-- [ ] 11. Module Management: Create Module entity with UNIQUE(course_id, order_index). Create ModuleRepository. Create ModuleService with add (auto order_index, ownership), update, delete (cascade + reorder), reorder (validate IDs). Create ModuleController. Write unit and integration tests.
+- [x] 11. Module Management: Create Module entity with UNIQUE(course_id, order_index). Create ModuleRepository. Create ModuleService with add (auto order_index, ownership), update, delete (cascade + reorder), reorder (validate IDs). Create ModuleController. Write unit and integration tests.
   - Requirements: R7
 
-- [ ] 12. Lesson Management: Create Lesson entity with UNIQUE(module_id, order_index). Create LessonRepository. Create LessonService with create (YouTube URL validation and video ID extraction, ownership), update, delete (reorder), getLesson (enrollment + premium check). Create LessonController. Write unit and integration tests.
+- [x] 12. Lesson Management: Create Lesson entity with UNIQUE(module_id, order_index). Create LessonRepository. Create LessonService with create (YouTube URL validation and video ID extraction, ownership), update, delete (reorder), getLesson (enrollment + premium check). Create LessonController. Write unit and integration tests.
   - Requirements: R8
 
-- [ ] 13. Course Enrollment: Create Enrollment entity with UNIQUE(student_id, course_id). Create EnrollmentRepository. Create EnrollmentService with enroll (check published, check not enrolled, check premium, increment enrollment_count, publish event), listEnrollments (paginated). Create EnrollmentController. Write unit and integration tests.
+- [x] 13. Course Enrollment: Create Enrollment entity with UNIQUE(student_id, course_id). Create EnrollmentRepository. Create EnrollmentService with enroll (check published, check not enrolled, check premium, increment enrollment_count, publish event), listEnrollments (paginated). Create EnrollmentController. Write unit and integration tests.
   - Requirements: R6
 
-- [ ] 14. Progress Tracking & Lesson Completion: Create LessonProgress entity with UNIQUE(student_id, lesson_id). Create ProgressService with markLessonComplete (idempotent, calculate completion %, update enrollment, check 100% → publish CourseCompletedEvent), getProgress. Create ProgressController. Integrate XpAwardService and StreakService calls. Write unit and integration tests.
+- [x] 14. Progress Tracking & Lesson Completion: Create LessonProgress entity with UNIQUE(student_id, lesson_id). Create ProgressService with markLessonComplete (idempotent, calculate completion %, update enrollment, check 100% → publish CourseCompletedEvent), getProgress. Create ProgressController. Integrate XpAwardService and StreakService calls. Write unit and integration tests.
   - Requirements: R15, R11
 
 - [ ] 15. XP Award Service & Level System: Create XpTransaction entity with UNIQUE(student_id, source_type, source_id). Create LevelThreshold entity. Create XpAwardService.awardXp() with idempotency check, atomic XP update, level recalculation, event publishing. Create GamificationController GET /api/v1/gamification/xp. Configure XP amounts in application properties. Write unit and integration tests.
