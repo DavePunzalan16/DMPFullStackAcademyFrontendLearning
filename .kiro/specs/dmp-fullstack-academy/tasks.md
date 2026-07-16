@@ -21,7 +21,7 @@ This plan implements the DMP Full Stack Academy gamified LMS platform across 42 
 - [x] 5. User Registration: Create RegisterRequest record with Bean Validation (email, password 8-128 chars with complexity, displayName 2-50 chars). Create AuthService.register() with email uniqueness check, BCrypt hashing (cost 10), STUDENT role assignment, xp=0, level=1. Create AuthController POST /api/v1/auth/register returning 201. Create UserMapper. Write unit and integration tests.
   - Requirements: R1
 
-- [ ] 6. User Authentication (Login, Refresh, Logout): Create RefreshToken entity and repository. Create LoginAttemptService (5 failures in 15min → lock 30min). Implement AuthService.login() (credentials check, lockout check, issue tokens in HTTP-only secure cookies with SameSite=Strict). Implement refresh with token rotation and replay detection. Implement logout (revoke token, clear cookies). Write unit and integration tests for all auth flows.
+- [x] 6. User Authentication (Login, Refresh, Logout): Create RefreshToken entity and repository. Create LoginAttemptService (5 failures in 15min → lock 30min). Implement AuthService.login() (credentials check, lockout check, issue tokens in HTTP-only secure cookies with SameSite=Strict). Implement refresh with token rotation and replay detection. Implement logout (revoke token, clear cookies). Write unit and integration tests for all auth flows.
   - Requirements: R2, R26
 
 - [ ] 7. Role-Based Authorization & User Management: Create UserService with getCurrentUser, listUsers (ADMIN paginated), updateUserRole (prevent self-change, prevent last-admin removal, revoke refresh tokens). Create UserController with GET /me, GET /users, PUT /users/{id}/role. Add @PreAuthorize annotations. Write unit and integration tests.
