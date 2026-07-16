@@ -4,48 +4,26 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --background: 260 100% 6%;
+    --foreground: 0 0% 98%;
+    --card: 260 30% 8%;
+    --card-foreground: 0 0% 98%;
+    --popover: 260 30% 8%;
+    --popover-foreground: 0 0% 98%;
     --primary: 262 80% 85%;
     --primary-foreground: 0 0% 4%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --secondary: 260 20% 14%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 260 20% 14%;
+    --muted-foreground: 260 10% 65%;
+    --accent: 262 50% 20%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 260 20% 16%;
+    --input: 260 20% 16%;
     --ring: 262 80% 85%;
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 270 100% 6%;
-    --foreground: 210 40% 98%;
-    --card: 0 0% 10%;
-    --card-foreground: 210 40% 98%;
-    --popover: 0 0% 10%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 262 80% 85%;
-    --primary-foreground: 0 0% 4%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 262 80% 85%;
+    --radius: 0.75rem;
   }
 }
 
@@ -55,5 +33,18 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-gradient-to-r from-purple-400 via-pink-300 to-purple-400 bg-clip-text text-transparent;
+  }
+  .glass-card {
+    @apply rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm;
+  }
+  .glow {
+    box-shadow: 0 0 40px rgba(195, 177, 255, 0.15);
   }
 }

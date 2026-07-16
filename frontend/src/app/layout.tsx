@@ -5,6 +5,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "DMP Full Stack Academy",
   description: "Gamified full-stack learning management platform",
+  icons: {
+    icon: "/images/DmpFSALogo.jpg",
+  },
 };
 
 export default function RootLayout({
