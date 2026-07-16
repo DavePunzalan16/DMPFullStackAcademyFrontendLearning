@@ -90,16 +90,16 @@ This plan implements the DMP Full Stack Academy gamified LMS platform across 42 
 - [x] 28. Admin Dashboard API: Add admin endpoints: GET /api/v1/dashboard/admin/analytics (platform totals + DAU), GET /api/v1/dashboard/admin/courses (all courses including drafts with enrollment counts). Implement in AnalyticsService with @PreAuthorize ADMIN. Write integration tests.
   - Requirements: R19
 
-- [ ] 29. Frontend — Auth Features: Create auth feature module (types, api, hooks). Create login-form and register-form components with React Hook Form + Zod. Create login and register pages. Create auth guard layouts for student/instructor/admin. Implement token refresh in api-client. Create use-current-user hook populating Zustand store.
+- [x] 29. Frontend — Auth Features: Create auth feature module (types, api, hooks). Create login-form and register-form components with React Hook Form + Zod. Create login and register pages. Create auth guard layouts for student/instructor/admin. Implement token refresh in api-client. Create use-current-user hook populating Zustand store.
   - Requirements: R1, R2, R25
 
-- [ ] 30. Frontend — Shared Components & Layout: Initialize shadcn/ui components. Create navbar (role-aware), sidebar, footer, loading-spinner, error-boundary, page-header, data-table, youtube-player, xp-progress-bar. Ensure semantic HTML, ARIA labels, keyboard navigation, design tokens.
+- [x] 30. Frontend — Shared Components & Layout: Initialize shadcn/ui components. Create navbar (role-aware), sidebar, footer, loading-spinner, error-boundary, page-header, data-table, youtube-player, xp-progress-bar. Ensure semantic HTML, ARIA labels, keyboard navigation, design tokens.
   - Requirements: R25
 
-- [ ] 31. Frontend — Course Catalog & Search: Create course feature module (types, api, hooks). Create course-card, course-grid, course-filters components. Create catalog page with search/filter/pagination. Create public course detail page. Create learning paths page. Responsive layout with loading/empty states.
+- [x] 31. Frontend — Course Catalog & Search: Create course feature module (types, api, hooks). Create course-card, course-grid, course-filters components. Create catalog page with search/filter/pagination. Create public course detail page. Create learning paths page. Responsive layout with loading/empty states.
   - Requirements: R21, R25
 
-- [ ] 32. Frontend — Student Dashboard: Create gamification feature module. Create xp-card, streak-card, badge-grid, quest-card components. Create student dashboard page aggregating all data. Mobile-first responsive layout with empty state handling.
+- [x] 32. Frontend — Student Dashboard: Create gamification feature module. Create xp-card, streak-card, badge-grid, quest-card components. Create student dashboard page aggregating all data. Mobile-first responsive layout with empty state handling.
   - Requirements: R20, R25
 
 - [ ] 33. Frontend — Course Learning Experience: Create lesson feature module (types, api, hooks). Create lesson-sidebar (module/lesson tree with checkmarks), lesson-viewer (text + YouTube + complete button). Create enrolled course page, lesson page, progress page. Implement enrollment hook. Handle premium lesson gating.
@@ -123,7 +123,7 @@ This plan implements the DMP Full Stack Academy gamified LMS platform across 42 
 - [ ] 39. Frontend — Notifications, Badges, Certificates & Reviews: Create notification feature module with bell component and list page. Create badges page, certificates page, quest progress page. Create public certificate verification page. Add review submission to course page. Display reviews on course detail.
   - Requirements: R13, R16, R17, R22, R25
 
-- [ ] 40. Frontend — Landing Page & Public Pages: Create landing page with hero, features, CTA. Create 404 and error pages. Responsive design. WCAG 2.1 AA compliance audit on all public pages (contrast, headings, alt text, focus).
+- [x] 40. Frontend — Landing Page & Public Pages: Create landing page with hero, features, CTA. Create 404 and error pages. Responsive design. WCAG 2.1 AA compliance audit on all public pages (contrast, headings, alt text, focus).
   - Requirements: R25
 
 - [ ] 41. OpenAPI Documentation & API Annotations: Add @Tag, @Operation, @ApiResponse, @Schema annotations to all controllers and DTOs. Verify Swagger UI at /swagger-ui.html and /v3/api-docs in dev profile.
