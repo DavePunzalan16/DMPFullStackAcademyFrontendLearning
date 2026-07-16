@@ -6,6 +6,9 @@ import com.dmpacademy.course.Course;
 import com.dmpacademy.course.CourseRepository;
 import com.dmpacademy.event.CourseCompletedEvent;
 import com.dmpacademy.event.LessonCompletedEvent;
+import com.dmpacademy.gamification.StreakService;
+import com.dmpacademy.gamification.XpAwardService;
+import com.dmpacademy.gamification.XpConfig;
 import com.dmpacademy.lesson.Lesson;
 import com.dmpacademy.lesson.LessonRepository;
 import com.dmpacademy.progress.dto.ProgressResponse;
@@ -34,6 +37,9 @@ public class ProgressService {
     private final CourseRepository courseRepository;
     private final UserRepository userRepository;
     private final ApplicationEventPublisher eventPublisher;
+    private final XpAwardService xpAwardService;
+    private final StreakService streakService;
+    private final XpConfig xpConfig;
 
     @PreAuthorize("hasRole('STUDENT')")
     @Transactional
@@ -64,6 +70,12 @@ public class ProgressService {
                 .build();
 
         lessonProgressRepository.save(progress);
+
+        // Award XP for lesson completion
+        xpAwardService.awardXp(studentId, xpConfig.getLessonCompletion(), "LESSON", lessonId);
+
+        // Update streak
+        streakService.updateStreak(studentId);
 
         // Recalculate completion percentage
         long totalLessons = lessonRepository.countByCourseId(courseId);

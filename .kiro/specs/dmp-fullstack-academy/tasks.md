@@ -48,13 +48,13 @@ This plan implements the DMP Full Stack Academy gamified LMS platform across 42 
 - [x] 14. Progress Tracking & Lesson Completion: Create LessonProgress entity with UNIQUE(student_id, lesson_id). Create ProgressService with markLessonComplete (idempotent, calculate completion %, update enrollment, check 100% → publish CourseCompletedEvent), getProgress. Create ProgressController. Integrate XpAwardService and StreakService calls. Write unit and integration tests.
   - Requirements: R15, R11
 
-- [ ] 15. XP Award Service & Level System: Create XpTransaction entity with UNIQUE(student_id, source_type, source_id). Create LevelThreshold entity. Create XpAwardService.awardXp() with idempotency check, atomic XP update, level recalculation, event publishing. Create GamificationController GET /api/v1/gamification/xp. Configure XP amounts in application properties. Write unit and integration tests.
+- [x] 15. XP Award Service & Level System: Create XpTransaction entity with UNIQUE(student_id, source_type, source_id). Create LevelThreshold entity. Create XpAwardService.awardXp() with idempotency check, atomic XP update, level recalculation, event publishing. Create GamificationController GET /api/v1/gamification/xp. Configure XP amounts in application properties. Write unit and integration tests.
   - Requirements: R11
 
-- [ ] 16. Streak System: Create StreakService.updateStreak() with UTC calendar day logic (same day no-op, yesterday increment, else reset to 1), longest streak tracking, milestone detection (7/30/100 → publish StreakMilestoneEvent). Add GET /api/v1/gamification/streak endpoint. Integrate calls from Progress/Quiz/Challenge services. Write unit and integration tests.
+- [x] 16. Streak System: Create StreakService.updateStreak() with UTC calendar day logic (same day no-op, yesterday increment, else reset to 1), longest streak tracking, milestone detection (7/30/100 → publish StreakMilestoneEvent). Add GET /api/v1/gamification/streak endpoint. Integrate calls from Progress/Quiz/Challenge services. Write unit and integration tests.
   - Requirements: R12
 
-- [ ] 17. Quiz System: Create Quiz, QuizQuestion, QuizAnswerOption, QuizAttempt, QuizBestScore entities and repositories. Create QuizService with createQuiz (validate structure, ownership), getQuiz (enrollment check, hide answers), submitQuiz (calculate score, store attempt, update best score, first pass → award XP + streak). Create QuizController. Write unit and integration tests.
+- [x] 17. Quiz System: Create Quiz, QuizQuestion, QuizAnswerOption, QuizAttempt, QuizBestScore entities and repositories. Create QuizService with createQuiz (validate structure, ownership), getQuiz (enrollment check, hide answers), submitQuiz (calculate score, store attempt, update best score, first pass → award XP + streak). Create QuizController. Write unit and integration tests.
   - Requirements: R9
 
 - [ ] 18. Coding Challenge System: Create CodingChallenge, ChallengeTestCase, ChallengeSubmission, ChallengeCompletion entities and repositories. Create CodeExecutionService (Docker sandbox, timeout). Create ChallengeService with createChallenge, getChallenge (enrollment), submitCode (execute, store, first completion → award XP + streak). Create ChallengeController. Write unit and integration tests.
