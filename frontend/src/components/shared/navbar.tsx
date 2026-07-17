@@ -36,6 +36,9 @@ export function Navbar() {
           <Link href="/courses" className="text-sm text-muted-foreground transition-colors hover:text-white">
             Courses
           </Link>
+          <Link href="/paths" className="text-sm text-muted-foreground transition-colors hover:text-white">
+            Paths
+          </Link>
 
           {isAuthenticated && user ? (
             <>
