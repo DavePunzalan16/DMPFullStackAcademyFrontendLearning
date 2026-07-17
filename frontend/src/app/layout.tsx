@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Providers } from "@/lib/providers";
+import { GamificationProvider } from "@/components/gamification/GamificationProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -18,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className="font-sans antialiased">
-        <Providers>{children}</Providers>
+        <Providers>
+          <GamificationProvider>{children}</GamificationProvider>
+        </Providers>
       </body>
     </html>
   );
